@@ -1,0 +1,51 @@
+#board {
+    background-color: blue;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    padding: 0px;
+}
+
+#board-left-corner {
+    background-color: yellow;
+    clip-path: polygon(100% 0, 50% 0, 0 100%, 100% 100%);
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#board-right-corner {
+    background-color: yellow;
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.border-column {
+    background-color: yellow;
+    border: 1px black solid;
+    border-bottom: 0;
+}
+
+.circle {
+    display: inline-block;
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    border: black 1px solid;
+    margin: 5px;
+}
+
+.default {
+    background-color: white;
+}
+
+.red {
+    background: red;
+}
+
+.black {
+    background-color: black;
+}
+
+.header {
+    border: 0;
+}

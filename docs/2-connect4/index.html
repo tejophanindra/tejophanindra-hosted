@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect four by Teja</title>
+    <title>Connect Four by Teja</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
@@ -13,36 +13,38 @@
 
 <body>
     <header style="text-align: center">
-        <h1>Connect 4! v0.1</h1>
-        <h3>WiP by Teja</h3>
+        <h1>Connect Four!</h1>
+        <h3>WiP v0.2 by Teja</h3>
+        <h3 style="font-style: italic;">Only straight lines currently, diagonals to come in v0.3</h3>
         <h4 style="font-style: italic;">Not compatible with Mobile (yet)</h4>
+        <h2 style="display:none">No Winner Yet...</h2>
     </header>
     <div class="container-fluid">
         <div class="row">
             <div class="col-2"></div>
-            <div class="col-8" style="height: 100px; margin-bottom: 10px;">
+            <div id="header-div" class="col-8" style="height: 100px; margin-bottom: 10px;">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
                         <div style="border:1px solid black; border-right:0;">
-                            <div class=" circle one header"></div>
+                            <div id="y0" class="h0-y0 circle header y-one"></div>
                         </div>
                         <div style="border:1px solid black; border-right:0;">
-                            <div class="circle two header"></div>
+                            <div id="y1" class="h0-y1 circle header"></div>
                         </div>
                         <div style="border:1px solid black; border-right:0;">
-                            <div class="circle three header"></div>
+                            <div id="y2" class="h0-y2 circle header"></div>
                         </div>
                         <div style="border:1px solid black; border-right:0;">
-                            <div class="circle four header"></div>
+                            <div id="y3" class="h0-y3 circle header"></div>
                         </div>
                         <div style="border:1px solid black; border-right:0;">
-                            <div class="circle five header"></div>
+                            <div id="y4" class="h0-y4 circle header"></div>
                         </div>
                         <div style="border:1px solid black; border-right:0;">
-                            <div class="circle six header"></div>
+                            <div id="y5" class="h0-y5 circle header"></div>
                         </div>
                         <div style="border:1px solid black;">
-                            <div class="circle seven header"></div>
+                            <div id="y6" class="h0-y6 circle header"></div>
                         </div>
                     </div>
                 </div>
@@ -55,79 +57,79 @@
             <div id="board" class="col-8">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x0-y0 circle default"></div>
+                        <div class="x0-y1 circle default"></div>
+                        <div class="x0-y2 circle default"></div>
+                        <div class="x0-y3 circle default"></div>
+                        <div class="x0-y4 circle default"></div>
+                        <div class="x0-y5 circle default"></div>
+                        <div class="x0-y6 circle default"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x1-y0 circle default"></div>
+                        <div class="x1-y1 circle default"></div>
+                        <div class="x1-y2 circle default"></div>
+                        <div class="x1-y3 circle default"></div>
+                        <div class="x1-y4 circle default"></div>
+                        <div class="x1-y5 circle default"></div>
+                        <div class="x1-y6 circle default"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x2-y0 circle default"></div>
+                        <div class="x2-y1 circle default"></div>
+                        <div class="x2-y2 circle default"></div>
+                        <div class="x2-y3 circle default"></div>
+                        <div class="x2-y4 circle default"></div>
+                        <div class="x2-y5 circle default"></div>
+                        <div class="x2-y6 circle default"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x3-y0 circle default"></div>
+                        <div class="x3-y1 circle default"></div>
+                        <div class="x3-y2 circle default"></div>
+                        <div class="x3-y3 circle default"></div>
+                        <div class="x3-y4 circle default"></div>
+                        <div class="x3-y5 circle default"></div>
+                        <div class="x3-y6 circle default"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x4-y0 circle default"></div>
+                        <div class="x4-y1 circle default"></div>
+                        <div class="x4-y2 circle default"></div>
+                        <div class="x4-y3 circle default"></div>
+                        <div class="x4-y4 circle default"></div>
+                        <div class="x4-y5 circle default"></div>
+                        <div class="x4-y6 circle default"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x5-y0 circle default"></div>
+                        <div class="x5-y1 circle default"></div>
+                        <div class="x5-y2 circle default"></div>
+                        <div class="x5-y3 circle default"></div>
+                        <div class="x5-y4 circle default"></div>
+                        <div class="x5-y5 circle default"></div>
+                        <div class="x5-y6 circle default"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="circle one default"></div>
-                        <div class="circle two default"></div>
-                        <div class="circle three default"></div>
-                        <div class="circle four default"></div>
-                        <div class="circle five default"></div>
-                        <div class="circle six default"></div>
-                        <div class="circle seven default"></div>
+                        <div class="x6-y0 circle default"></div>
+                        <div class="x6-y1 circle default"></div>
+                        <div class="x6-y2 circle default"></div>
+                        <div class="x6-y3 circle default"></div>
+                        <div class="x6-y4 circle default"></div>
+                        <div class="x6-y5 circle default"></div>
+                        <div class="x6-y6 circle default"></div>
                     </div>
                 </div>
             </div>
